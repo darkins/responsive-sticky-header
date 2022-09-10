@@ -1,0 +1,147 @@
+:root {
+    --black: #000;
+    --white: #fff;
+    --grey: #f4f4f4;
+    --text: #666;
+    --pad: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    color: var(--black);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    position: fixed;
+    width: 100%;
+    height: 4em;
+    top: 0;
+    transition: 250ms;
+}
+
+.logo {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.5em 0;
+    transition: 250ms
+}
+
+nav {
+    position: absolute;
+    top: 3em;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    background: var(--white);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: menu_animation 500ms ease-in-out;
+}
+
+nav a {
+    margin-bottom: 1rem;
+    padding: 0.5em;
+    color: var(--text);
+    text-transform: uppercase;
+    font-size: 1em;
+    text-decoration: none;
+    transition: 250ms;
+    font-size: 70%;
+}
+
+nav a:hover {
+    color: var(--black);
+}
+
+.hamburger-on, .hamburger-off {
+    background: transparent url(./assets/icons/hamburger.svg) center center no-repeat;
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+
+.hamburger-off {
+    background: transparent url(./assets/icons/close.svg) 100% 50% no-repeat; 
+}
+
+.show-nav {
+    display: flex;
+}
+
+@keyframes menu_animation {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    nav {
+        flex-direction: row;
+        position: unset;
+        width: auto;
+        height: auto;
+        background-color: var(--white);
+    }
+    .hamburger-on {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+    nav a {
+        margin-bottom: 0;
+        margin-left: var(--pad);
+    }
+}
+
+main {
+    position: absolute;
+    top: 4em;
+    z-index: -1;
+}
+
+.featured {
+    width: 100%;
+    height: 100vh;
+    background: rgb(42, 58, 81);
+    padding: 2rem;
+    color: var(--white);
+}
+
+.featured h2 {
+    line-height: 1.2;
+    margin-bottom: 0.1em;
+}
+
+.featured p {
+    margin-bottom: 1em;
+    color:rgb(179, 192, 211);
+}
+
+.btn {
+    padding: 0.5em 1em;
+    border: 0 none;
+}

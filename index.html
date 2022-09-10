@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sticky Header</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <div class="hamburger-on"></div>
+        <nav class="menu">
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="featured">
+            <div class="card">
+                <h2>Let the happiness in fam!</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, minima optio? Enim ullam, in
+                    omnis architecto cum itaque ad tenetur, aperiam laboriosam consequuntur natus veniam adipisci,
+                    aliquam dolorum. Ex, voluptate!tore, deleniti dignissimos tenetur debitis est. Iure impedit odit ut
+                    molestias voluptas culpa!
+                </p>
+                <button class="btn">Learn More</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        const header = document.querySelector("header");
+        const hamburger = document.querySelector(".hamburger-on");
+        const nav = document.querySelector(".menu");
+        let hamburgerOpen = false;
+        hamburger.addEventListener("click", function () {
+            if (!hamburgerOpen) {
+                nav.classList.toggle("show-nav");
+                hamburger.classList.toggle("hamburger-off");
+            } else {
+                nav.classList.remove("show-nav");
+                hamburger.classList.remove("show-nav");
+                hamburgerOpen = false;
+            }
+        });
+    </script>
+</body>
+
+</html>

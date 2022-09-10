@@ -15,7 +15,7 @@
 }
 
 html {
-  font-size: 75.5%;
+  font-size: 85.5%;
 }
 
 body {
@@ -143,9 +143,6 @@ main {
 }
 
 @media screen and (min-width: 700px) {
-  html {
-    font-size: 85.5%;
-  }
   nav {
     flex-direction: row;
     position: unset;

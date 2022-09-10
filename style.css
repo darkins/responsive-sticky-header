@@ -104,6 +104,42 @@ nav a:hover {
   }
 }
 
+main {
+  position: absolute;
+  top: 4em; 
+  z-index: -1;
+}
+
+.featured {
+  width: 100%;
+  height: 100vh;
+  padding: var(--pad);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.featured h2 {
+  line-height: 1.2;
+  margin-bottom: 0.1em;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.featured p {
+  margin-bottom: 1em;
+}
+
+.card {
+  width: 100%;
+  margin: var(--pad-lg) 0;
+}
+
+.btn {
+  padding: 0.5em 1em;
+  border: 0 none;
+}
+
 @media screen and (min-width: 700px) {
   html {
     font-size: 85.5%;
@@ -125,37 +161,7 @@ nav a:hover {
     margin-bottom: 0;
     margin-left: var(--pad);
   }
-}
-
-main {
-  position: absolute;
-  top: 4em; 
-  z-index: -1;
-}
-
-.featured {
-  width: 100%;
-  padding: var(--pad);
-  display: flex;
-  justify-content: center;
-}
-
-.featured h2 {
-  line-height: 1.2;
-  margin-bottom: 0.1em;
-  font-family: 'Libre Baskerville', serif;
-}
-
-.featured p {
-  margin-bottom: 1em;
-}
-
-.card {
-  max-width: 600px;
-  margin: var(--pad-lg) auto;
-}
-
-.btn {
-  padding: 0.5em 1em;
-  border: 0 none;
+  .card {
+    width: 70%;
+  }
 }

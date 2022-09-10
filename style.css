@@ -36,6 +36,8 @@ header {
   position: fixed;
   width: 100%;
   height: 4em;
+  background-color: var(--white);
+  margin-bottom: var(--pad-lg);
   top: 0;
   transition: 250ms;
 }

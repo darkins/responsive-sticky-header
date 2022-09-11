@@ -67,6 +67,11 @@
         const hamburger = document.querySelector(".hamburger-on");
         const nav = document.querySelector(".menu");
         let hamburgerOpen = false;
+
+        window.addEventListener("scroll", function () {
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
         hamburger.addEventListener("click", function () {
             if (!hamburgerOpen) {
                 nav.classList.toggle("show-nav");

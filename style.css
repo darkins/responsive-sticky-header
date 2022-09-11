@@ -83,6 +83,7 @@ nav a {
   font-weight: 500;
   text-decoration: none;
   transition: 250ms;
+  font-size: var(--pad-lg);
 }
 
 nav a:hover {
@@ -208,6 +209,7 @@ h1:after {
   nav a {
     margin-bottom: 0;
     margin-left: var(--pad);
+    font-size: var(--pad);
   }
   .card {
     width: 70%;

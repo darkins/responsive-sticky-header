@@ -28,6 +28,9 @@ body {
   font-size: 1em;
   line-height: 1.5;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 a {
@@ -119,20 +122,23 @@ nav a:hover {
   }
 }
 
-main {
-  position: absolute;
-  top: 4em; 
-  z-index: -1;
+main {  
+  width: 100%;
+  margin-top: 4em;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: var(--lg) var(--pad);
 }
 
 .featured {
   width: 100%;
-  padding: var(--pad);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: var(--grey);
+  padding: var(--lg) var(--pad);
+  background: var(--grey) url(./assets/images/pexel2.jpg) 0 0 no-repeat;
+  background-size: contain;
+  backdrop-filter: brightness(90%);
 }
 
 .featured h2 {
@@ -144,8 +150,8 @@ main {
 }
 
 .card {
-  width: 100%;
-  margin: var(--lg) 0;
+  max-width: 1024px;
+  margin: var(--lg) auto;
 }
 
 .btn {
@@ -155,14 +161,11 @@ main {
 
 /* Footer */
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 footer p {

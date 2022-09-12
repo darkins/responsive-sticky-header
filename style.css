@@ -20,7 +20,7 @@
 }
 
 html {
-  font-size: 85.5%;
+  font-size: 75.5%;
 }
 
 body {
@@ -132,13 +132,13 @@ main {
 .container {
   max-width: 1024px;
   margin: 0 auto;
-  padding: var(--lg) var(--reg);
+  padding: var(--lg);
 }
 
 .featured {
   width: 100%;
-  padding: var(--lg) var(--reg);
   background-color: var(--grey);
+  padding: var(--lg) 0;
 }
 
 .featured h2 {
@@ -204,6 +204,9 @@ h1:after {
 }
 
 @media screen and (min-width: 700px) {
+  html {
+    font-size: 85.5%;
+  }
   nav {
     flex-direction: row;
     position: unset;
